@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class NewIssuesPage extends BasePage {
     private WebElement issueTitleField = driver.findElement(By.id("issue_title"));
-    private WebElement submitNewIssue = driver.findElement(By.xpath("//*[@class='btn-primary btn ml-2']"));
+    private WebElement submitNewIssue = driver.findElement(By.xpath("//div[2]/button[contains(text(),'Submit new issue')]"));
 
     public NewIssuesPage(WebDriver driver) {
         super(driver);
