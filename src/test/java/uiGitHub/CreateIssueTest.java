@@ -1,6 +1,9 @@
+package uiGitHub;
+
 import Pages.IssuesPage;
 import Pages.NewIssuesPage;
 import org.junit.jupiter.api.Test;
+import uiGitHub.BaseTest;
 
 public class CreateIssueTest extends BaseTest {
     @Test
