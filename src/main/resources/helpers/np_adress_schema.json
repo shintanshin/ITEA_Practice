@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "success": "boolean",
+  "data": [
+    {
+      "Description": "String",
+      "DescriptionRu": "String",
+      "DescriptionTranslit": "String",
+      "SettlementTypeDescription": "String",
+      "SettlementTypeDescriptionRu": "String",
+      "SettlementTypeDescriptionTranslit": "String",
+      "AreaDescription": "String",
+      "AreaDescriptionRu": "String",
+      "AreaDescriptionTranslit": "String",
+      "Index1": "integer",
+      "Index2": "integer",
+      "IndexCOATSU1": "integer",
+      "Warehouse": "integer"
+    }
+  ],
+  "errors": "array",
+  "warnings": "array",
+  "info": {
+    "totalCount": "integer"
+  },
+  "messageCodes":"array",
+  "errorCodes":"array",
+  "warningCodes": "array",
+  "infoCodes": "array"
+}
