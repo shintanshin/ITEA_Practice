@@ -1,3 +1,5 @@
+package uiGitHub;
+
 import Pages.BasePage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
