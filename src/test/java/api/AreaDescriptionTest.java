@@ -2,8 +2,9 @@ package api;
 
 import dto.AddressGeneral;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,12 +13,13 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.Assert.assertTrue;
+
 
 public class AreaDescriptionTest extends BaseNpApiTest {
     Map<String, Object> reqBody = new HashMap<>();
 
-    @BeforeEach
+    @BeforeMethod
     public void setReqBody() {
         Map<String, Object> methodProperties = new HashMap<>();
 
@@ -60,7 +62,7 @@ public class AreaDescriptionTest extends BaseNpApiTest {
                 .extract()
                 .body().jsonPath().getList("data", AddressGeneral.class);
 
-        boolean poltavObl = addressGeneralList.stream().filter(el -> el.getAreaDescription().contains("Полтав")).findAny().isPresent();
+        boolean poltavObl = addressGeneralList.stream().anyMatch(el -> el.getAreaDescription().contains("Полтав"));
         assertTrue(poltavObl);
     }
 }

@@ -1,8 +1,8 @@
 package api;
 
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class TestSettlementsApi extends BaseNpApiTest {
     Map<String, Object> reqBody = new HashMap<>();
 
-    @BeforeEach
+    @BeforeMethod
     public void setReqBody() {
         Map<String, Object> methodProperties = new HashMap<>();
 

@@ -5,14 +5,14 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.junit.jupiter.api.BeforeEach;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseNpApiTest {
     protected String ApiKey = "252b1fbbf76c795e0b8961e2444c81c9";
     protected RequestSpecification reqSpec;
     protected ResponseSpecification respSpec;
 
-    @BeforeEach
+    @BeforeMethod
     public void setSpecs (){
         reqSpec = new RequestSpecBuilder()
                 .log(LogDetail.BODY)
